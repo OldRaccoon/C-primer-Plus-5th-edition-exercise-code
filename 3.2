@@ -8,3 +8,21 @@ into your mass in kilograms by dividing by 2.2. Finally, compute your BMI by div
 your mass in kilograms by the square of your height in meters. Use symbolic constants
 to represent the various conversion factors.
 */
+
+
+#include <iostream>
+using namespace std;
+
+int main()
+{
+	int high_foot; int high_inch; int weight_in_pounds; double IBM;
+	const double pound_to_meter = 2.2;
+	const int foot_to_inch = 12;
+
+	cout << "You are ____ feet\b\b\b\b\b\b\b\b"; cin >> high_foot; cout << " ____ inches tall\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b"; cin >> high_inch; 
+	cout << " and ____pounds weight\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b"; cin >> weight_in_pounds; 
+	IBM = weight_in_pounds / pound_to_meter / ((high_foot * foot_to_inch + high_inch)*0.0254);
+	cout << "Your IBM is " << IBM << endl;
+	return 0;
+
+}
