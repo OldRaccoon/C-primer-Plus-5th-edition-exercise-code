@@ -1,0 +1,36 @@
+/*
+9. Do Programming Exercise 6, but, instead of declaring an array of three CandyBar structures,
+use new to allocate the array dynamically.
+*/
+
+
+#include <iostream>
+#include <cstring>
+#include <string>
+using namespace std;
+
+struct CandyBar {
+	string brand;
+	double weight;
+	int cal;
+};
+
+int main(){
+	CandyBar *p = new CandyBar[3];
+	p[0].brand = "AAAAA";
+	p[0].weight = 2.3;
+	p[0].cal = 45;
+	p[1].brand = "BBBBAA";
+	p[1].weight = 4.3;
+	p[1].cal = 65;
+	p[2].brand = "cccc";
+	p[2].weight = 32.3;
+	p[2].cal = 567;
+
+	cout << "buxiang xiele" << endl;
+	return 0;
+
+
+
+	
+}
