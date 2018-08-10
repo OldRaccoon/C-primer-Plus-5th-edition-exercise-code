@@ -1,0 +1,36 @@
+/*
+Do Programming Exercise 7, but use new to allocate a structure instead of declaring a
+structure variable. Also, have the program request the pizza diameter before it requests
+the pizza company name.
+*/
+
+
+#include <iostream>
+#include <cstring>
+#include <string>
+using namespace std;
+
+struct Pizza {
+	string company;
+	double zhijing;
+	double weight;
+};
+
+int main() {
+	Pizza *p=new Pizza;
+	cout << "Please enter the company name: "<<endl;
+	getline(cin, p->company);
+	cout << "Please enter the zhijing: "<<endl;
+	cin >> p->zhijing;
+	cout << "Please enter the weight: " << endl;
+	cin >> p->weight;
+
+	cout << "The information of this pizza is: " << endl;
+	cout << "pizza company name is: " << p->company << endl;
+	cout << "zhijing of the pizza is: " << p->zhijing << endl;
+	cout << "weight of the pizza is: " << p->weight << endl;
+	return 0;
+
+
+	
+}
