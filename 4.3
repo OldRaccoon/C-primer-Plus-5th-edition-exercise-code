@@ -10,19 +10,19 @@ Here’s the information in a single string: Fleming, Flip
 
 
 #include <iostream>
-#include <string>
+#include <cstring>
 using namespace std;
 
 int main()
 {
-	string fname; string lname; string fullname;
+	char fname[50]; char lname[50]; 
 	cout << "Enter your first name: ";
-	getline(cin, fname);
+	cin.getline (fname, 50);
 	cout << "Enter your last name: ";
-	getline(cin, lname);
-	fullname = fname + ", " + lname;
+	cin.getline(lname, 50);
+	char fullname[100];
+	strcpy_s(fullname, lname);
+	strcat_s(fullname, ", ");
+	strcat_s(fullname, fname);
 	cout << "Here is the information in a single string: " << fullname << endl;
 	return 0;
-
-
-}
