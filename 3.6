@@ -1,0 +1,22 @@
+/*
+6. Write a program that asks you to enter an automobile gasoline consumption figure in the
+European style (liters per 100 kilometers) and converts to the U.S. style of miles per gallon.
+Note that in addition to using different units of measurement, the U.S approach
+(distance / fuel) is the inverse of the European approach (fuel / distance). Note that 100
+kilometers is 62.14 miles, and 1 gallon is 3.875 liters. Thus, 19 mpg is about 12.4 l/100
+km, and 27 mpg is about 8.7 l/100 km.
+*/
+
+
+#include <iostream>
+using namespace std;
+
+int main()
+{
+	double l;
+		cout << "输入每一百公里耗油量(L): ";
+		cin >> l;
+		cout << "那么每加仑可以行驶:" << 1/l*62.14*3.875 << "英里;";
+		return 0;
+
+}
