@@ -1,0 +1,42 @@
+/* 
+William Wingate runs a pizza-analysis service. For each pizza, he needs to record the following
+information:
+ The name of the pizza company, which can consist of more than one word
+ The diameter of the pizza
+ The weight of the pizza
+Devise a structure that can hold this information and write a program that uses a structure
+variable of that type. The program should ask the user to enter each of the preceding
+items of information, and then the program should display that information. Use cin
+(or its methods) and cout.
+*/
+
+
+#include <iostream>
+#include <cstring>
+#include <string>
+using namespace std;
+
+struct Pizza {
+	string company;
+	double zhijing;
+	double weight;
+};
+
+int main() {
+	Pizza user;
+	cout << "Please enter the company name: "<<endl;
+	getline(cin, user.company);
+	cout << "Please enter the zhijing: "<<endl;
+	cin >> user.zhijing;
+	cout << "Please enter the weight: " << endl;
+	cin >> user.weight;
+
+	cout << "The information of this pizza is: " << endl;
+	cout << "pizza company name is: " << user.company << endl;
+	cout << "zhijing of the pizza is: " << user.zhijing << endl;
+	cout << "weight of the pizza is: " << user.weight << endl;
+	return 0;
+
+
+	
+}
