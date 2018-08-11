@@ -1,0 +1,25 @@
+/* Write a program that requests the user to enter two integers. The program should then
+calculate and report the sum of all the integers between and including the two integers.
+At this point, assume that the smaller integer is entered first. For example, if the user
+enters 2 and 9, the program should report that the sum of all the integers from 2 through
+9 is 44.
+*/
+
+#include <iostream>
+#include <cstring>
+#include <string>
+using namespace std;
+
+int main() {
+	int a; int b; int i; int sum;
+	cout << "Enter a smaller number please: ";
+	cin >> a;
+	cout << "Now enter a bigger number please: ";
+	cin >> b;
+	sum = 0;
+	for (i = a; i <= b; i++)
+		sum +=i;
+	cout << "The total sum between " << a << " and " << b << " is " << sum << endl;
+	return 0;
+
+}
