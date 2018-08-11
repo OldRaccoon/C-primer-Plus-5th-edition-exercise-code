@@ -1,0 +1,22 @@
+/*Write a program that asks the user to type in numbers. After each entry, the program
+should report the cumulative sum of the entries to date. The program should terminate
+when the user enters 0.*/
+
+
+#include <iostream>
+#include <cstring>
+#include <string>
+using namespace std;
+
+int main() {
+	int sum; int a;
+	sum = 0;
+	cin >> a;
+	while (a !=0)
+	{
+		sum += a;
+		cout << "The totoal sum of your entered number is: " << sum << endl;
+		cin >> a;
+	}
+	return 0;
+}
